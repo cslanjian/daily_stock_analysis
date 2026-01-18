@@ -890,7 +890,7 @@ def main() -> int:
     warnings = config.validate()
     for warning in warnings:
         logger.warning(warning)
-    
+    '''
     # 解析股票列表
     stock_codes = None
     if args.stocks:
@@ -950,6 +950,7 @@ def main() -> int:
     except Exception as e:
         logger.exception(f"程序执行失败: {e}")
         return 1
+    '''
 
 
 if __name__ == "__main__":
