@@ -203,6 +203,10 @@ class NotificationService:
     
     def _is_pushover_configured(self) -> bool:
         """检查 Pushover 配置是否完整"""
+        logger.info("配置pushover_user_key")
+        logger.info(bool(self._pushover_config['user_key']))
+        logger.info("配置pushover_api_token")
+        logger.info(bool(self._pushover_config['api_token']))
         return bool(self._pushover_config['user_key'] and self._pushover_config['api_token'])
     
     def is_available(self) -> bool:
